@@ -1,5 +1,8 @@
 name: deploy-container
 
+env:
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
+
 on:
   push:
     branches:
@@ -8,8 +11,6 @@ on:
       - "packages/container/**"
 
 defaults:
-  env:
-    ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
   run:
     working-directory: packages/container
 
