@@ -8,10 +8,10 @@ on:
       - "packages/container/**"
 
 defaults:
-  run:
-    working-directory: packages/container
   env:
     ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
+  run:
+    working-directory: packages/container
 
 jobs:
   build:
