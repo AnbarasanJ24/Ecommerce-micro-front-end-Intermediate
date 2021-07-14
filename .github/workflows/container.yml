@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - "packages/container/**"
+    env:
+    ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
 
 defaults:
   run:
