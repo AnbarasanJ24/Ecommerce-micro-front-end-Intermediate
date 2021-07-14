@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-    steps:
-      - run: echo "packages/container/**" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+    paths:
+      - "packages/container/**"
 
 defaults:
   run:
@@ -14,6 +14,9 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    env:
+    ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
 
     steps:
       - uses: actions/checkout@v2
